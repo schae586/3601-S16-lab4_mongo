@@ -22,8 +22,12 @@
 
 ##### Study the file api/pets/pets.controller.js, answer the following questions:
 -  What kind of documents would the database contain? What is the field in the model?
+> the database contains json objects and the field is a string Pet.
 -  What functions are defined in the controller? How do they change the database data?
+> The funstions defined are index, create, and destroy.
 -  How does one get or delete elements in the database?
+
+> They can use the destroy and find functions
 
 ##### What is the purpose of index.js in the api/pets? Where is it referenced?
 

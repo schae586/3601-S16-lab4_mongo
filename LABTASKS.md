@@ -6,11 +6,19 @@
 
 ##### What are the differences between the folder structure of this project and the previous one? Note that api/pets is server-side routing specific to the database, and the client folder contains the client-side portion of the project.
 
+- This lab has separate folders for client and server. The javascript files on the client side are stored in the related folders.
+
 ##### How is app.js (at the project root) different from the ones in the previous two labs? Give examples of the kinds of urls that app.js handles, and describe where each case will be routed.
+
+- This lab uses app.use for api routing and the other labs do not have api routing. '/*' routes to the index and '*' routes to the 404 pages as a wild card.
 
 ##### The project is connected to the database via mongoose. Where is this connection set?
 
+- In app.js var mongoConfig = require('./config/mongo.js'); is set
+
 ##### Explain how api/pets/pets.controller.js gets added to app.js (remember this is all server-side).
+
+- It is added in app.js in the app.use similar to how routes get added.
 
 ##### Study the file api/pets/pets.controller.js, answer the following questions:
 -  What kind of documents would the database contain? What is the field in the model?

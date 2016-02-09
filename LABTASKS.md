@@ -50,7 +50,11 @@
 
 ##### Where is the code for the navigation bar located? How is it connected to the pages of the project?
 
+- The code for the navbar is located in /client/components/navbar/ and it is connected to the pages through a <script> element in the head.
+
 ##### client/app.js performs client-side routing. How do you think it works?
+
+- We think it works by providing the url Route and location route, but if it cannot find that, it returns the 404 page.
 
 ## Part 2: Add another field to pet data.
 

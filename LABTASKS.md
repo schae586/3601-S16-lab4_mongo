@@ -21,19 +21,30 @@
 - It is added in app.js in the app.use similar to how routes get added.
 
 ##### Study the file api/pets/pets.controller.js, answer the following questions:
+
 -  What kind of documents would the database contain? What is the field in the model?
--- the database contains json objects and the field is a string Pet.
+
+- the database contains json objects and the field is a string Pet.
+
 -  What functions are defined in the controller? How do they change the database data?
--- The funstions defined are index, create, and destroy.
+
+- The functions defined are index, create, and destroy. It adds or removes json items from the database, or returns an item.
+
 -  How does one get or delete elements in the database?
 
--- They can use the destroy and find functions
+- They can use the destroy and find functions
 
 ##### What is the purpose of index.js in the api/pets? Where is it referenced?
 
+- It defines the API for pets.
+
 ##### What views are used in the project?
 
+- 404, main, about.
+
 ##### We've seen a few different ways to display HTML in the last couple labs (straight, individual HTML pages and components being added to HTML). How are HTML files combined and displayed in this lab? 
+
+- They are assembled using angular to form the pages and change the elements in a page.
 
 >Protip: main.html isn't a full HTML document, so how does it get displayed?
 

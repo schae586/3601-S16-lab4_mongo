@@ -50,13 +50,11 @@ exports.destroy = function(req, res) {
          return res.sendStatus(204);
       });
     });
-exports.heaviestPet = function(req, res){
-    Pet.findOne().sort(weight -1){
-
-    }
-}
-
 };
 
+exports.heaviestPet = function(req, res){
+     /*Pet.findOne(req.params.pet_id).sort(Pet.weight -1);*/
+    return "hi";
+    };
 
 

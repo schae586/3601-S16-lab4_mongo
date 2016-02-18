@@ -52,9 +52,3 @@ exports.destroy = function(req, res) {
     });
 };
 
-exports.heaviestPet = function(req, res){
-     /*Pet.findOne(req.params.pet_id).sort(Pet.weight -1);*/
-    return "hi";
-    };
-
-

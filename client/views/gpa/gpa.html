@@ -4,15 +4,24 @@
     <ul class="list-group">
         <li class="list-group-item">
 
-            <form ng-submit="main.addData()">
-                <input ng-model="main.textField" type="text" size="30" placeholder="add a new pet to the list!">
-                <input ng-model="main.petWeight" type="number" size="20" placeholder="enter a pet weight!">
-                <input type="submit" value="submit" class="btn btn-primary">
-                <span class="floatRight">Items in this list: {{main.itemsInList()}}  &nbsp; |  &nbsp; {{main.heaviestPet()}}</span>
+            <form ng-submit="gpa.addData()">
+                <input ng-model="gpa.courseNameField" type="text" size="25" placeholder="Course Name">
+                <input ng-model="gpa.creditsField" type="number" size="25" placeholder="Credits">
+
+                <select ng-model="gpa.gradeField" type="text">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>F</option>
+                </select>
+
+                <input type="submit" value="add course" class="btn btn-primary">
+                <span class="floatRight">Items in this list: {{gpa.itemsInList()}}</span>
             </form>
 
         </li>
-        <li class="list-group-item" ng-repeat="test in main.data">Pet Name: {{test.text}}, Weight: {{test.weight}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="main.removeData($index)"></span></li>
+        <li class="list-group-item" ng-repeat="test in gpa.data">Course Name: {{test.courseName}}, Credits: {{test.credits}}, Grade: {{test.grade}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="gpa.removeData($index)"></span></li>
     </ul>
 </div>
 

@@ -5,7 +5,7 @@
 // Defining Model
 // =====================================================
 
-    var GPA = mongoose.model('GPA', {
+    var gpa = mongoose.model('gpacourse', {
         courseName: String,
         credits: Number,
         grade: String
@@ -15,7 +15,7 @@
 // =====================================================
 
     exports.index = function(req, res) {
-        GPA.find(function (err, courses) {
+        gpa.find(function (err, courses) {
             if (err) {
                 console.log("Error getting data from database");
                 res.send(err)
@@ -26,11 +26,11 @@
     };
 
     exports.create = function(req, res) {
-        GPA.create(req.body, function (err, course) {
+        gpa.create(req.body, function (err, course) {
             if (err) {
                 res.send(err);
             } else {
-                GPA.find(function (err, courses) {
+                gpa.find(function (err, courses) {
                     if (err) {
                         res.send(err);
                     }
@@ -42,7 +42,7 @@
     };
 
     exports.destroy = function(req, res) {
-        GPA.findById(req.params.course_id, function(err, course){
+        gpa.findById(req.params.course_id, function(err, course){
             if(err) { res.send(err); return "error: " + err; }
             if(!course) { return res.sendStatus(404); }
 

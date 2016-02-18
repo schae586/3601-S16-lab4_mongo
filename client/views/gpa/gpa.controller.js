@@ -22,7 +22,7 @@ angular.module("appModule")
         self.getCourses();
 
         self.addData = function(){
-            if(self.courseNameField.length >= 1 && self.creditsField > 0 && self.gradeField != "") {
+            if(self.courseNameField.length >= 1) {
                 $http.post('api/gpa', {courseName: self.courseNameField, credits: self.creditsField, grade: self.gradeField}).success(function(){
                     self.getCourses();
                 });

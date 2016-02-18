@@ -17,8 +17,8 @@ module.exports = function(config) {
     files: [
         'client/bower_components/angular/angular.js',
         'client/bower_components/angular-mocks/angular-mocks.js',
-        'client/bower_components/angular-ui-router/release/*.js',
         'client/app.js',
+        'client/bower_components/angular-ui-router/release/*.js',
         'client/views/**/*.js'
     ],
 

@@ -46,6 +46,42 @@ angular.module("appModule")
             return self.data.length;
         };
 
+        self.gpaCalculator = function(){
+            var creditTotal = 0;
+            var gradePointTotal = 0;
+
+            for(var i = 0; i < gpa.self.data.length ; i++) {
+                var gradePointPerClass = 0;
+                creditTotal += self.data[i].credits;
+                gradePointPerClass = gpa.convertFromLetter(i) * self.data[i].credits;
+                gradePointTotal += (gradePointPerClass);
+            }
+
+            var finalGPA = Math.round((gradePointTotal/creditTotal) * 100) / 100;
+
+            if (finalGPA >= 0.0) {
+                return finalGPA;
+            } else {
+                return "Add a course to begin!";
+            }
+        };
+
+        self.convertFromLetter =  function(){
+            var gradePoint = 0;
+            if (self.data[i].grade === "A") {
+                gradePoint = 4.00;
+            } else if (self.data[i].grade === "B") {
+                gradePoint = 3.00;
+            } else if (self.data[i].grade === "C") {
+                gradePoint = 2.00;
+            } else if (self.data[i].grade === "D") {
+                gradePoint = 1.00;
+            } else {
+                gradePoint = 0.00;
+            }
+            return gradePoint;
+        }
+
 
 
     });

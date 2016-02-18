@@ -12,6 +12,6 @@ var router = express.Router();
 router.get('/', controller.index);
 router.post('/', controller.create);
 router.delete('/:pet_id', controller.destroy);
-router.get('/:pet_id', controller.heaviestPet);
+
 
 module.exports = router;

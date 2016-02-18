@@ -46,14 +46,14 @@ angular.module("appModule")
             return self.data.length;
         };
 
-        self.gpaCalculator = function(){
+        self.gpaCalculator = function(arr){
             var creditTotal = 0;
             var gradePointTotal = 0;
 
-            for(var i = 0; i < gpa.self.data.length ; i++) {
+            for(var i = 0; i < arr.length ; i++) {
                 var gradePointPerClass = 0;
-                creditTotal += self.data[i].credits;
-                gradePointPerClass = gpa.convertFromLetter(i) * self.data[i].credits;
+                creditTotal += arr[i].credits;
+                gradePointPerClass = self.convertFromLetter(arr, i) * arr[i].credits;
                 gradePointTotal += (gradePointPerClass);
             }
 
@@ -66,15 +66,15 @@ angular.module("appModule")
             }
         };
 
-        self.convertFromLetter =  function(){
+        self.convertFromLetter =  function(arr, i){
             var gradePoint = 0;
-            if (self.data[i].grade === "A") {
+            if (arr[i].grade === "A") {
                 gradePoint = 4.00;
-            } else if (self.data[i].grade === "B") {
+            } else if (arr[i].grade === "B") {
                 gradePoint = 3.00;
-            } else if (self.data[i].grade === "C") {
+            } else if (arr[i].grade === "C") {
                 gradePoint = 2.00;
-            } else if (self.data[i].grade === "D") {
+            } else if (arr[i].grade === "D") {
                 gradePoint = 1.00;
             } else {
                 gradePoint = 0.00;

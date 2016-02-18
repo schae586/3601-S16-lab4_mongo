@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 // Defining Model
 // =====================================================
 
-var Pet = mongoose.model('Pet', {
+var Pet = mongoose.model('GPA', {
     text: String,
     weight: Number
 });

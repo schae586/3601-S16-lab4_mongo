@@ -44,10 +44,15 @@ var options = {
 
 // API Routes
 app.use('/api/pets', require('./api/pets'));
+app.use('/api/gpa', require('./api/gpa'));
 
 // Non-API routes
 app.get('/*', function(req, res){
     res.sendFile('index.html', options);
+});
+
+app.get('/gpa', function(req, res){
+    res.sendFile('gpa.html', options);
 });
 
 // Wildcard catches requests for non-existing routes or files and responds with a 404 html page

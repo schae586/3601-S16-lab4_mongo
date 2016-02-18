@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
 <div ng-include="'components/navbar/navbar.html'"></div>
+<hr>
+<div class="container">
+    <ul class="list-group">
+        <li class="list-group-item">
 
-</body>
+            <form ng-submit="main.addData()">
+                <input ng-model="main.textField" type="text" size="30" placeholder="add a new pet to the list!">
+                <input ng-model="main.petWeight" type="number" size="20" placeholder="enter a pet weight!">
+                <input type="submit" value="submit" class="btn btn-primary">
+                <span class="floatRight">Items in this list: {{main.itemsInList()}}  &nbsp; |  &nbsp; {{main.heaviestPet()}}</span>
+            </form>
 
-</html>
+        </li>
+        <li class="list-group-item" ng-repeat="test in main.data">Pet Name: {{test.text}}, Weight: {{test.weight}}<span class="glyphicon glyphicon-trash floatRight" style="color: red" ng-click="main.removeData($index)"></span></li>
+    </ul>
+</div>
+
